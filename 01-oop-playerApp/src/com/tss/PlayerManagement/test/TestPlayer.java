@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class TestPlayer {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        Player[] players=new Player[10];
+        Player[] players=new Player[3];
         for(int i=0;i<players.length;i++) {
             players[i] = new Player();
             System.out.println("\nEnter Details for player "+(i+1)+"\n");
@@ -19,9 +19,9 @@ public class TestPlayer {
             players[i].setWickets(InputValidation.readInt("Enter Wicket : ", 0));
         }
 
+        System.out.println("ID\tName\t\tMatch\t\tRuns\t\tWicket\t\tAverage");
         for(int i=0;i<players.length;i++) {
-            System.out.println("\nPlayer "+(i+1)+" :");
-            players[i].printDetails();
+            System.out.println(players[i].getId()+"\t"+players[i].getName()+"\t\t"+players[i].getNumberOfMatchas()+"\t\t\t"+players[i].getRuns()+"\t\t\t"+players[i].getWickets()+"\t\t\t"+players[i].calculateAverage());
         }
     }
 }
