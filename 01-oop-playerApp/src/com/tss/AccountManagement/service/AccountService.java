@@ -21,6 +21,11 @@ public class AccountService {
             int attempt=0;
             switch (choice) {
                 case 1:
+                    if (index>=10)
+                    {
+                        System.out.println("Account limit cross");
+                        break;
+                    }
                     accounts[index] = new Account();
                     createAccount(accounts[index]);
                     index++;

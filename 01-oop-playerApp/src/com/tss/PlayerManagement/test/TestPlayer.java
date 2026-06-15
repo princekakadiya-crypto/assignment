@@ -8,7 +8,8 @@ import java.util.Scanner;
 public class TestPlayer {
     public static void main(String[] args) {
         Scanner scanner=new Scanner(System.in);
-        Player[] players=new Player[3];
+        int size=InputValidation.readInt("Enter number of Player : ",1);
+        Player[] players=new Player[size];
         for(int i=0;i<players.length;i++) {
             players[i] = new Player();
             System.out.println("\nEnter Details for player "+(i+1)+"\n");
