@@ -1,0 +1,66 @@
+->Problem Statement
+Design a Dynamic Notification Processing System for an e-commerce platform.
+The platform needs to send different types of notifications to customers based on business events 
+such as order placement, payment confirmation, shipment update, refund processing, offer 
+announcement, and account security alerts.
+The system should be designed in such a way that new notification types can be added in the 
+future without disturbing the already existing and tested notification processing flow.
+
+->Business Context
+An e-commerce company communicates with customers through multiple notification channels. 
+Each notification type has its own content format, delivery rules, priority level, and processing 
+behavior.
+
+Currently, the system must support the following notification types:
+1. Email notification 
+2. SMS notification 
+3. Push notification 
+4. WhatsApp notification 
+In the future, the business may introduce additional notification types such as in-app notification, 
+voice call notification, chatbot notification, or third-party marketing notification.
+
+->Functional Requirements
+The system should allow the platform to process customer notifications for different business 
+events.
+
+The system must support the following operations:
+1. Accept notification request details. 
+2. Identify the notification type requested by the business event. 
+3. Validate the notification request. 
+4. Prepare notification content based on the selected notification type. 
+5. Process the notification according to its own delivery behavior. 
+6. Display or return the delivery status. 
+7. Handle unsupported notification types properly.
+8. Allow future notification types to be added without changing the existing notification processing logic. 
+
+->Input Details
+Each notification request should include:
+Field Description
+Customer name Name of the customer
+Customer contact detail Email, phone number, device token, or other contact value
+Notification type Type of notification to be sent
+Event type Business event that triggered the notification
+Message content Main message to be delivered
+Priority level Normal, high, or urgent
+Timestamp Time at which notification is created
+
+->Business Rules
+1. Customer name cannot be empty. 
+2. Customer contact detail must be present. 
+3. Notification type must be valid. 
+4. Message content cannot be empty. 
+5. Each notification type may have a different delivery behavior. 
+6. Each notification type may format the message differently. 
+7. High-priority notifications should be processed before normal notifications. 
+8. Unsupported notification types should not break the system. 
+9. New notification types should be introduced without modifying existing working notification classes. 
+10. Existing notification behavior should remain stable when new notification types are added.
+
+->Expected Outcome
+Create a clean object-oriented solution that demonstrates the Open/Closed Principle.
+
+The final solution should clearly show that the system is:
+Requirement Meaning
+Open for extension New notification types can be added in the future
+Closed for modification Existing tested notification logic should not require unnecessary 
+changes

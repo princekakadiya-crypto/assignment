@@ -1,0 +1,49 @@
+Problem Statement
+Design an Online Course Enrollment System where students can enroll in different courses 
+through an application.
+The system should allow a student to submit an enrollment request for a course. Once the request 
+is submitted, the system must handle the complete enrollment process in a clean and structured 
+way while following the Single Responsibility Principle.
+Functional Requirements
+
+The system should support the following operations:
+1. Accept student enrollment details. 
+2. Validate student information. 
+3. Check whether the selected course exists. 
+4. Check whether seats are available in the selected course. 
+5. Calculate the course fee based on course type. 
+6. Apply scholarship or discount if applicable. 
+7. Generate an enrollment confirmation number. 
+8. Save the enrollment details. 
+9. Send enrollment confirmation to the student. 
+10. Maintain enrollment activity records. 
+
+Input Details
+The enrollment request should include:
+ Student name 
+ Student email 
+ Student age 
+ Course name 
+ Course type 
+ Course duration 
+ Scholarship status 
+ Number of available seats 
+
+Business Rules
+1. Student name and email must be valid. 
+2. Student age must be greater than or equal to 16. 
+3. Course name cannot be empty. 
+4. Enrollment should not be allowed if seats are unavailable. 
+5. Different course types may have different fee structures.
+6. Scholarship students should receive a discount. 
+7. A confirmation number must be generated only after successful enrollment. 
+8. Confirmation should be sent only after the enrollment is saved successfully. 
+
+Expected Design Focus
+The main focus of this assignment is to identify different responsibilities and separate them 
+properly.
+The system should not place validation, fee calculation, seat checking, confirmation generation, 
+saving, notification, and activity tracking inside one single class.
+Expected Outcome
+Create a clean object-oriented design that follows the Single Responsibility Principle.
+Each class should have one clear responsibility and one clear reason to change.
