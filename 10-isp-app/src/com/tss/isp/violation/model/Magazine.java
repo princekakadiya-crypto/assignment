@@ -24,6 +24,11 @@ public class Magazine implements LibraryItem{
 
     }
 
+    public String getId()
+    {
+        return issueNumber;
+    }
+
     @Override
     public void renewItem(String memberId) {
         System.out.println(memberId+" Renew Magazine "+title);

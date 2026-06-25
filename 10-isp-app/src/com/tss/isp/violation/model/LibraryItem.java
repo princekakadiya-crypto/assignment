@@ -7,4 +7,5 @@ public interface LibraryItem {
     void reserveItem(String memberId) throws IllegalAccessException;
     double calculateFine(int daysOverdue);
     boolean isReferenceOnly() throws IllegalAccessException;
+    String getId();
 }

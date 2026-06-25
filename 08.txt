@@ -1,8 +1,8 @@
 ->Problem Statement
+
 Design a Dynamic Notification Processing System for an e-commerce platform.
 The platform needs to send different types of notifications to customers based on business events 
-such as order placement, payment confirmation, shipment update, refund processing, offer 
-announcement, and account security alerts.
+such as order placement, payment confirmation, shipment update, refund processing, offer announcement, and account security alerts.
 The system should be designed in such a way that new notification types can be added in the 
 future without disturbing the already existing and tested notification processing flow.
 
@@ -38,8 +38,7 @@ Each notification request should include:
 Field Description
 Customer name Name of the customer
 Customer contact detail Email, phone number, device token, or other contact value
-Notification type Type of notification to be sent
-Event type Business event that triggered the notification
+Notification type Type of notification to be sent Event type Business event that triggered the notification
 Message content Main message to be delivered
 Priority level Normal, high, or urgent
 Timestamp Time at which notification is created

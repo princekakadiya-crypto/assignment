@@ -27,6 +27,11 @@ public class Book implements LibraryItem{
         System.out.println(memberId+"re new Book "+title);
     }
 
+    public String getId()
+    {
+        return isbn;
+    }
+
     @Override
     public void reserveItem(String memberId) throws IllegalAccessException {
         throw new IllegalAccessException("Book can not be reserve");
